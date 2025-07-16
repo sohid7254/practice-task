@@ -1,154 +1,168 @@
 
 
+
+
+
 .open-sans-normal {
   font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
   font-style: normal;
   font-variation-settings:
     "wdth" 100;
 }
+
+/* shared style */
 .secondary-bg{
     background-color: #FFF8F3;
 }
 .text-primary{
-    color: #fd6e0a;
+    color: #FD6E0A;
 }
-.header{
-    background-image: url('../images/developer.png'),url('../images/header_bg.png');
-    background-repeat: no-repeat;
-    background-position: top left,bottom right;
+.dark-2{
+    color: #474747;
+}
 
+.btn-primary{
+    background-color: #FD6E0A;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    border: none;
+    padding: 18px 35px;
+    border-radius: 5px;
 }
-/* section title */
+
 .section-title{
     font-size: 35px;
     font-weight: bold;
-    color: blue
+    color: #181818;
 }
-.section-discription{
+
+.section-description{
     font-size: 18px;
     color: #757575;
-    
 }
+
 .text-center{
     text-align: center;
-    
 }
+/* header  */
+.header{
+    background-image: url('../images/developer.png'), url('../images/header_bg.png');
+    background-repeat: no-repeat;
+    background-position: top left, bottom right;
+}
+
+/* Nav styles */
 nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin: 0 200px;
 }
 
 .nav-title{
-    font-weight: 800;
+    font-weight:800;
     font-size: 45px;
-    margin-left: 200px;
 }
-nav ul {
+
+nav ul{
     display: flex;
     align-items: center;
-    
 }
 
-nav ul li{
+nav ul li {
     list-style: none;
-   margin-right: 51px;
-
-    
+    margin-right: 50px;
 }
-nav li a{
+
+nav li a {
     text-decoration: none;
-}
-.btn-primary{
-    background-color: #FD6E0A;
     font-size: 20px;
-    font-weight: bold;
-    color: white;
-    padding: 18px 37px;
-    border-radius: 5px;
-    border: none;
+}
 
-}
-.dark2{
-    color: #474747;
-}
-.banner-content{
-    max-width: 580px;
-
-}
+/* banner styles */
 .banner{
     display: flex;
     justify-content: space-between;
     margin: 0 35px 0 200px;
 }
-.banner-greetings{
-    font-weight: 600;
-    font-size: 45px;
-
+.banner-content{
+    max-width: 580px;
 }
+.banner-greetings{
+    font-size: 45px;
+    font-weight: 600;
+}
+
 .banner-title{
     font-weight: bold;
-    font-size: 18px;
+    font-size: 85px;
 }
-.banner-pic{
+.banner-profile-pic{
     width: 580px;
 }
+
+/* main styles */
 main{
     max-width: 1140px;
     margin: 0 auto;
 }
+
 main section{
     margin-top: 130px;
     margin-bottom: 130px;
 }
 
+/* about styles */
 .about{
     border-radius: 10px;
     padding: 130px 150px;
     text-align: center;
-    margin-top: 130px;
+    
 }
 .about-items{
-    
     display: flex;
     justify-content: space-around;
 }
-.item-discription{
+.item-description{
     font-weight: 600;
 }
 
+/* skills section styles */
 .skills-container{
     display: flex;
     gap: 24px;
-    
 }
+
 .skill{
     padding: 30px;
-    box-shadow: 0px 6px 50px 0px rgba(0, 0, 0,0.06);
     border-radius: 5px;
-    
+    box-shadow: 0px 6px 50px 0px rgba(0, 0, 0, 0.06);
 }
-/* resume section */
+
+/* resume section styles */
 .resume-container{
     display: flex;
     gap: 24px;
-
 }
 .experience-sub-title{
-    margin-bottom: 10px;
-    font-size: px;
+    font-size: 20px;
     font-weight: 600;
-
-    }
-.experience-sub-title,.experience-discription{
+    margin-bottom: 20px;
+}
+.experience-description, .experience-sub-title{
     color: #757575;
 }
-.resume-btn-container{
+.resume hr{
+    margin: 30px 5px;
+}
+
+.resume-download-cv{
     margin-top: 50px;
 }
-    
+
+/* footer styles */
 footer{
     padding: 130px 230px;
     display: flex;
@@ -157,13 +171,45 @@ footer{
 .footer-column{
     width: 50%;
 }
-footer input[type="text"], footer input[type="email"], footer textarea{
-    height: 40px;
+
+footer input[type="text"],  footer input[type="email"], footer textarea{
+    height: 64px;
     border-radius: 5px;
     background-color: white;
     display: block;
     width: 100%;
+    padding: 10px 20px;
     margin-bottom: 24px;
-    padding: 18px 30px 18px 30px;
     border: none;
+}
+@media screen and (max-width:576px) {
+    .skills-container, 
+    .resume-container, 
+    footer, .about-items, 
+    .banner, nav{
+        flex-direction: column;
+    }
+    .btn-primary{
+        margin-bottom: 20px;
+    }
+    footer, .about{
+        padding: 20px;
+    }
+    .header {
+        background-image: none;
+    }
+    .banner-profile-pic{
+        width: 100%;
+    }
+    .banner{
+        margin: 20px;
+    }
+    .footer-column{
+        width: 100%;
+    }
+    footer input[type="text"],  
+    footer input[type="email"], 
+    footer textarea{
+       width: calc(100%-40px); 
+    }
 }
